@@ -535,11 +535,11 @@ dialog[open]{animation:fadeUp .6s var(--ease)}
       </button>
       <button type="button" class="card reveal" data-play="IV" aria-label="Play chapter IV, Zama">
         <div class="film__media">
-          <picture><source type="image/avif" srcset="../img/film-4-600.avif 600w, ../img/film-4-1000.avif 1000w" sizes="(max-width: 900px) 112vw, 37vw"><source type="image/webp" srcset="../img/film-4-600.webp 600w, ../img/film-4-1000.webp 1000w" sizes="(max-width: 900px) 112vw, 37vw"><img class="poster" src="../img/film-4-1000.jpg" srcset="../img/film-4-600.jpg 600w, ../img/film-4-1000.jpg 1000w" sizes="(max-width: 900px) 112vw, 37vw" width="1000" height="563" alt="" loading="lazy" decoding="async" style="object-position:70% 85%"></picture>
+          <picture><source type="image/avif" srcset="../img/film-4-600.avif 600w, ../img/film-4-1000.avif 1000w" sizes="(max-width: 900px) 112vw, 37vw"><source type="image/webp" srcset="../img/film-4-600.webp 600w, ../img/film-4-1000.webp 1000w" sizes="(max-width: 900px) 112vw, 37vw"><img class="poster" src="../img/film-4-1000.jpg" srcset="../img/film-4-600.jpg 600w, ../img/film-4-1000.jpg 1000w" sizes="(max-width: 900px) 112vw, 37vw" width="1000" height="563" alt="" loading="lazy" decoding="async" style="object-position:62% 35%"></picture>
           <div class="film__shade"></div><div class="film__num">IV</div><div class="tag glass">COMING SOON</div>
           <span class="playbtn glass" style="left:18px;bottom:18px;width:52px;height:52px"><svg width="14" height="14" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1.5 L11 6 L3 10.5 Z" fill="currentColor"/></svg></span>
         </div>
-        <div class="film__body"><div class="kicker" style="font-size:11px;letter-spacing:.24em">202 BC — ZAMA</div><h3 style="font-size:30px">[CHAPTER IV TITLE]</h3><p>Years later, in Africa, Scipio awaits Hannibal for the final act.</p></div>
+        <div class="film__body"><div class="kicker" style="font-size:11px;letter-spacing:.24em">202 BC — ZAMA</div><h3 style="font-size:30px">Hannibal and the Battle of Zama</h3><p>Hannibal returns to Carthage to defend it, and Scipio is waiting. At Zama, what happened at Cannae happens again… in reverse.</p></div>
       </button>
     </div>
   </div>
@@ -647,7 +647,7 @@ const FILMS = {
   I:   { meta: 'CHAPTER I · 219 BC — SAGUNTUM', title: 'The siege that ignited a war', src: 'https://www.youtube.com/embed/1vzNUB1k7_s' },
   II:  { meta: 'CHAPTER II · 218 BC — THE ALPS', title: 'Hannibal Crosses the Alps', src: 'https://www.youtube.com/embed/qEE7YH02s3s' },
   III: { meta: 'CHAPTER III · 216 BC — CANNAE', title: 'Hannibal and the Battle of Cannae', src: 'https://www.youtube.com/embed/EZ8KpRyL_sM' },
-  IV:  { meta: 'CHAPTER IV · 202 BC — ZAMA', title: '[CHAPTER IV TITLE]', src: '' }
+  IV:  { meta: 'CHAPTER IV · 202 BC — ZAMA', title: 'Hannibal and the Battle of Zama', src: '', img: 'film-4' }
 };
 
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -807,7 +807,7 @@ const makeSnow = () => {
     document.getElementById('dlg-meta').textContent = f.meta;
     document.getElementById('dlg-title').textContent = f.title;
     if (!f.src) {
-      box.innerHTML = '<img src="../img/cta-1000.jpg" alt=""><div style="position:relative"><div class="mono" style="font-size:13px">[INSERT VIDEO]</div><div style="margin-top:10px;font-size:14px;color:var(--muted)">16:9 player placeholder</div></div>';
+      box.innerHTML = `<img src="../img/${f.img || 'cta'}-1000.jpg" alt=""><div style="position:relative"><div class="mono" style="font-size:13px">COMING SOON</div><div style="margin-top:10px;font-size:14px;color:var(--muted)"><a href="https://www.youtube.com/@historiasdeltiopipa?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to the channel</a> so you don't miss it.</div></div>`;
     } else if (/\.(mp4|webm|mov)(\?|$)/i.test(f.src)) {
       box.innerHTML = `<video src="${esc(f.src)}" controls autoplay playsinline poster="../img/anibal-1920.jpg"></video>`;
     } else {
