@@ -89,6 +89,10 @@ TR = [
     ("Anníbal, d'esquena i amb capa granat, contempla la plana de Cannes al capvespre, sembrada d'escuts",
      "Aníbal, de espaldas y con capa granate, contempla la llanura de Cannas al atardecer, sembrada de escudos",
      "Hannibal, seen from behind in a crimson cloak, looks out over the plain of Cannae at sunset, strewn with shields"),
+    ("Capítol IV, Zama", "Capítulo IV, Zama", "Chapter IV, Zama"),
+    ("Els dos exèrcits formats a l'alba a la plana de Zama: els elefants d'Anníbal a l'esquerra i les legions d'Escipió a la dreta",
+     "Los dos ejércitos formados al alba en la llanura de Zama: los elefantes de Aníbal a la izquierda y las legiones de Escipión a la derecha",
+     "The two armies drawn up at dawn on the plain of Zama: Hannibal's elephants on the left, Scipio's legions on the right"),
     ("Tots els capítols", "Todos los capítulos", "All chapters"),
     ("VAL · SUBT. ES/EN", "V.O. VALENCIANO · SUBT. ES/EN", "VALENCIAN · ES/EN SUBS"),
     ("Baixar als curts", "Bajar a los cortos", "Scroll to the films"),
@@ -108,7 +112,7 @@ TR = [
     ("Reproduir capítol IV, Zama", "Reproducir capítulo IV, Zama", "Play chapter IV, Zama"),
     ("ESTRENA · 4 OCT. 2026", "ESTRENO · 4 OCT. 2026", "PREMIERE · 4 OCT 2026"),
     ("ESTRENA · 13 OCT. 2026 · 5:04", "ESTRENO · 13 OCT. 2026 · 5:04", "PREMIERE · 13 OCT 2026 · 5:04"),
-    ("ESTRENA · 23 OCT. 2026 · 4:39", "ESTRENO · 23 OCT. 2026 · 4:39", "PREMIERE · 23 OCT 2026 · 4:39"),
+    ("ESTRENA · 16 OCT. 2026 · 4:39", "ESTRENO · 16 OCT. 2026 · 4:39", "PREMIERE · 16 OCT 2026 · 4:39"),
     ("Anníbal i la batalla de Cannes", "Aníbal y la batalla de Cannas", "Hannibal and the Battle of Cannae"),
     ("Roma posa en camp huit legions, «una cosa que no s'havia fet mai», segons Polibi. Al vespre, l'exèrcit romà ja no existix.",
      "Roma pone en campaña ocho legiones, «algo que nunca se había hecho», según Polibio. Al anochecer, el ejército romano ya no existe.",
@@ -248,7 +252,7 @@ VIDEOS = [  # id de YouTube, durada ISO, data de publicació, títol i descripci
      {"ca": ("Anníbal i la batalla de Cannes (216 aC)", "Capítol III. A la plana de Cannes, Roma posa en camp huit legions, «una cosa que no s'havia fet mai», segons Polibi. Davant, uns cinquanta mil homes d'Anníbal. Al vespre, l'exèrcit romà ja no existix."),
       "es": ("Aníbal y la batalla de Cannas (216 a. C.)", "Capítulo III. En la llanura de Cannas, Roma pone en campaña ocho legiones, «algo que nunca se había hecho», según Polibio. Enfrente, unos cincuenta mil hombres de Aníbal. Al anochecer, el ejército romano ya no existe."),
       "en": ("Hannibal and the Battle of Cannae (216 BC)", "Chapter III. On the plain of Cannae, Rome puts eight legions in the field, \"a thing which had never been done before\", according to Polybius. Facing them, some fifty thousand of Hannibal's men. By nightfall, the Roman army no longer exists.")}),
-    ("i86IrGd23zE", "PT4M39S", "2026-10-23", 4,
+    ("i86IrGd23zE", "PT4M39S", "2026-10-16", 4,
      {"ca": ("Anníbal i la batalla de Zama (202 aC)", "Capítol IV, el final. Anníbal torna a Cartago amb més de quaranta-cinc anys per a defendre-la, i l'espera Escipió. Abans de la batalla, els dos generals es troben a soles enmig de la plana. L'endemà, a Zama, passa el mateix que a Cannes… a l'inrevés."),
       "es": ("Aníbal y la batalla de Zama (202 a. C.)", "Capítulo IV, el final. Aníbal vuelve a Cartago con más de cuarenta y cinco años para defenderla, y lo espera Escipión. Antes de la batalla, los dos generales se encuentran a solas en medio de la llanura. Al día siguiente, en Zama, ocurre lo mismo que en Cannas… al revés."),
       "en": ("Hannibal and the Battle of Zama (202 BC)", "Chapter IV, the finale. Hannibal returns to Carthage at over forty-five to defend it, and Scipio is waiting. Before the battle, the two generals meet alone in the middle of the plain. The next day, at Zama, what happened at Cannae happens again… in reverse.")}),
@@ -344,6 +348,7 @@ def build(lang):
     s = s.replace("<!--I18N_H1-->", h1(word), 1)
     s = s.replace("<!--I18N_H1_ALPS-->", h1(ALPS[lang], "p"), 1)
     s = s.replace("<!--I18N_H1_C3-->", h1(CANNES[lang], "p"), 1)
+    s = s.replace("<!--I18N_H1_C4-->", h1("Zama", "p"), 1)
 
     tips = {o: {"msg": TIP[o][0], "cta": TIP[o][1], "href": rel(lang, o)} for o in LANGS if o != lang}
     script = f"""/* Idioma: recorda l'elecció i suggereix (sense redirigir) la versió del navegador */
