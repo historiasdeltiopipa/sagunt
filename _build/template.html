@@ -642,7 +642,7 @@ dialog[open]{animation:fadeUp .6s var(--ease)}
     <span style="font-family:var(--serif);font-size:20px;letter-spacing:.14em;color:#c9b69c">ANNÍBAL · CRÒNIQUES DE FOC</span>
     <nav aria-label="Xarxes" style="display:flex;gap:28px">
       <a class="navlink" href="https://www.instagram.com/historiasdeltiopipa" target="_blank" rel="noopener" style="color:var(--muted)">Instagram</a>
-      <a class="navlink" href="https://www.youtube.com/@historiasdeltiopipa" target="_blank" rel="noopener" style="color:var(--muted)">YouTube</a>
+      <a class="navlink" href="https://www.youtube.com/channel/UCl2_mfS5HsxiaEaSiI1GR_A" target="_blank" rel="noopener" style="color:var(--muted)">YouTube</a>
     </nav>
     <span>© <span id="year"></span> Historias del Tío Pipa</span>
   </div>
@@ -834,7 +834,7 @@ const makeSnow = () => {
     document.getElementById('dlg-meta').textContent = f.meta;
     document.getElementById('dlg-title').textContent = f.title;
     if (!f.src) {
-      box.innerHTML = `<img src="img/${f.img || 'cta'}-1000.jpg" alt=""><div style="position:relative"><div class="mono" style="font-size:13px">PRÒXIMAMENT</div><div style="margin-top:10px;font-size:14px;color:var(--muted)"><a href="https://www.youtube.com/@historiasdeltiopipa?sub_confirmation=1" target="_blank" rel="noopener">Subscriu-te al canal</a> per a no perdre-te'l.</div></div>`;
+      box.innerHTML = `<img src="img/${f.img || 'cta'}-1000.jpg" alt=""><div style="position:relative"><div class="mono" style="font-size:13px">PRÒXIMAMENT</div><div style="margin-top:10px;font-size:14px;color:var(--muted)"><a href="https://www.youtube.com/channel/UCl2_mfS5HsxiaEaSiI1GR_A?sub_confirmation=1" target="_blank" rel="noopener">Subscriu-te al canal</a> per a no perdre-te'l.</div></div>`;
     } else if (/\.(mp4|webm|mov)(\?|$)/i.test(f.src)) {
       box.innerHTML = `<video src="${esc(f.src)}" controls autoplay playsinline poster="img/anibal-1920.jpg"></video>`;
     } else {

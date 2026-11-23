@@ -233,7 +233,7 @@ CANNES = {"ca": "Cannes", "es": "Cannas", "en": "Cannae"}
 
 
 # Dades estructurades (schema.org): productora, sèrie i un VideoObject per capítol publicat
-CANAL = "https://www.youtube.com/@historiasdeltiopipa"
+CANAL = "https://www.youtube.com/channel/UCl2_mfS5HsxiaEaSiI1GR_A"
 SERIE = {"ca": "Anníbal · Cròniques de foc", "es": "Aníbal · Crónicas de fuego", "en": "Hannibal · Chronicles of Fire"}
 DESC_SERIE = {
     "ca": "Sèrie documental sobre Anníbal i la Segona Guerra Púnica, recreada amb IA a partir de Polibi i Titus Livi. Narrada en valencià.",
